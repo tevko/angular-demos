@@ -20,7 +20,12 @@
         <p>This is your second angular expression: {{ 7/67 }}</p>
         <p>This is your Third angular expression: {{ 4.2E5 }}</p>
         <p>This is your fourth angular expression: {{ "\u2665" }}</p>
-        <p>This is your fourth angular expression: {{ [1, 2, 3] }}</p>
+        <p>This is your fifth angular expression: {{ [1, 2, 3] }}</p>
+        <h1 id="binding-some-data">Binding some Data</h1>
+    	<hr>
+    	<label>Type something into the input</label>
+        <input type="text" ng-model="data.message">
+        <p>{{data.message}}</p>
         <script src="js/main.js"></script>
     </body>
 </html>
