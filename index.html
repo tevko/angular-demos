@@ -14,13 +14,13 @@
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body ng-app="exploreAngular">
-		<section class="accordian" ng-controller="accordianController">
+	<body ng-app>
+		<section class="accordian">
 			<div class="accordian-item">
 				<h1 id="trying-out-expressions" class="accordian-title">Trying out expressions</h1>
-				<button ng-model="accordians" class="accordian-reveal"  ng-click="accordians = !accordians">+</button>
+				<button class="accordian-reveal">+</button>
 				<hr>
-				<article ng-show="accordians" class="accordian-content">
+				<article class="accordian-content">
 					<p>This is your first angular expression: {{ 1 + 2 }}</p>
 					<p>This is your second angular expression: {{ 7/67 }}</p>
 					<p>This is your Third angular expression: {{ 4.2E5 }}</p>
@@ -30,15 +30,25 @@
 			</div>
 			<div class="accordian-item">
 				<h1 id="binding-some-data" class="accordian-title">Binding some Data</h1>
-				<button ng-model="accordians" class="accordian-reveal"  ng-click="accordians = !accordians">+</button>
+				<button class="accordian-reveal">+</button>
 				<hr>
-				<article ng-show="accordians" class="accordian-content">
+				<article class="accordian-content">
 					<label>Type something into the input</label>
 					<input type="text" ng-model="data.message">
 					<p>{{data.message}}</p>
 					<input type="text" ng-model="data.foundation_component">
 					<div class="{{data.foundation_component}}">
 						wrap me with a foundation component
+					</div>
+				</article>
+			</div>
+			<div class="accordian-item">
+				<h1 id="controllers" class="accordian-title">Controllers</h1>
+				<button class="accordian-reveal">+</button>
+				<hr>
+				<article class="accordian-content">
+					<div ng-controller="FirstController">
+						<h4>{{data.message}}</h4>
 					</div>
 				</article>
 			</div>

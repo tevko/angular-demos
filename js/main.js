@@ -1,8 +1,21 @@
+//add our vanilla js tabs functionality
 
-//first up is tabs
+var tabbedElements = document.querySelectorAll('.accordian-reveal');
 
-var exploreAngular = angular.module('exploreAngular', [])
+function toggleClass(elem, theClass) {
+	elem.classList.toggle(theClass);
+};
 
-.controller('accordianController', function($scope) {
-	$scope.accordians = false;
-});
+//loop through all elements
+for (var i = 0; i < tabbedElements.length; i++) {
+	tabbedElements[i].addEventListener('click', function() {
+		toggleClass(this, '_show');
+		this.classList.contains('_show') ? this.innerHTML = '-' : this.innerHTML = '+'; 
+	});
+};
+
+//setting up our first controller
+
+function FirstController($scope) {
+	$scope.data = {message: "Hello World"};
+}

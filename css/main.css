@@ -13,10 +13,14 @@ body {
 	right: 0;
 }
 
+.accordian-reveal._show ~ .accordian-content {
+	display: block;
+}
+
 .accordian-item {
 	position: relative;
 }
 
 .accordian-content {
-	
+	display: none;
 }
