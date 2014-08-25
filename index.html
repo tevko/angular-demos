@@ -56,7 +56,7 @@
 						<input class="stuff" type="text" ng-model="newStuff"/>
 						<button ng-click="add()">Add</button>
 						<ul>
-							<li ng-repeat="thing in stuff">{{thing}}</li>
+							<li ng-repeat="thing in stuff track by $index">{{thing}}</li>
 						</ul>
 					</div>
 				</article>
