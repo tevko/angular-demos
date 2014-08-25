@@ -2,10 +2,15 @@
 
 body {
 	padding: 3em;
+	padding-bottom: 0;
 }
 
 
 /* accordian module */
+
+.accordian {
+	margin-bottom: 380px;
+}
 
 .accordian-reveal {
 	position: absolute;
@@ -22,5 +27,47 @@ body {
 }
 
 .accordian-content {
+	display: none;
+}
+
+/*notes widget*/
+
+.docnotes {
+	width: 100%;
+	border: solid 1px #ccc;
+	height: 300px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	background-color: orange;
+	padding: 20px;
+}
+
+.docnotes-toggle {
+	position: fixed;
+	bottom: 278px;
+	text-decoration: underline;
+	color: white;
+	cursor: pointer;
+	z-index: 2;
+	font-size: 12px;
+}
+
+.docnotes-toggle._hide {
+	bottom: 0;
+	background-color: white;
+	width: 100%;
+	left: 0;
+	background-color: orange;
+	padding: 5px;
+}
+
+.docnotes-toggle + .docnotes {
+	display: block;
+}
+
+.docnotes-toggle._hide + .docnotes {
 	display: none;
 }
