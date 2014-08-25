@@ -6,3 +6,4 @@ Resources
 * [Qucik Angular Youtube tutorials](https://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7)
 * [angular wiki](https://github.com/angular/angular.js/wiki/)
 * [NGshow/hide tutorial](http://odetocode.com/blogs/scott/archive/2013/08/14/dynamic-tabs-with-angularjs-and-ui-bootstrap.aspx)
+* [Angular controller tutorial](http://viralpatel.net/blogs/angularjs-controller-tutorial/)

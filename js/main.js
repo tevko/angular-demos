@@ -19,3 +19,16 @@ for (var i = 0; i < tabbedElements.length; i++) {
 function FirstController($scope) {
 	$scope.data = {message: "Hello World"};
 }
+
+//our addStuff controller
+function addStuff($scope) {
+	$scope.stuff = [];
+
+	$scope.add = function() {
+		if(document.querySelector('.stuff').value == '') {
+			return;
+		}
+		$scope.stuff.push($scope.newStuff);
+		$scope.newStuff = "";
+	};
+}

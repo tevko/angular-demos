@@ -48,7 +48,16 @@
 				<hr>
 				<article class="accordian-content">
 					<div ng-controller="FirstController">
-						<h4>{{data.message}}</h4>
+						<h3>Controller #1</h3>
+						<label>{{data.message}}</label>
+					</div>
+					<div ng-controller="addStuff">
+						<h3>Controller #2</h3>
+						<input class="stuff" type="text" ng-model="newStuff"/>
+						<button ng-click="add()">Add</button>
+						<ul>
+							<li ng-repeat="thing in stuff">{{thing}}</li>
+						</ul>
 					</div>
 				</article>
 			</div>
