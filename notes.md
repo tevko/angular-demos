@@ -3,7 +3,7 @@ I'm Exploring Angular
 
 **Here are my notes**
 
-Also be sure to check out the resources page
+Also be sure to check out the [resources](resources.md) page
 
 Getting Started
 -------------
