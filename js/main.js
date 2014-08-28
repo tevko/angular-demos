@@ -2,6 +2,8 @@
 
 var tabbedElements = document.querySelectorAll('.accordian-reveal');
 
+var myApp = angular.module('myApp', []);
+
 function toggleClass(elem, theClass) {
 	elem.classList.toggle(theClass);
 };
@@ -32,3 +34,19 @@ function addStuff($scope) {
 		$scope.newStuff = "";
 	};
 }
+
+//working with methods
+
+function methodController($scope) {
+	$scope.data = {reverse: 'I\'m Backwards'};
+	$scope.reversedMessage = function(reverse) {
+		return reverse.split('').reverse().join('');
+	}
+}
+
+//adding a filter 
+myApp.filter('reverse', function() {
+	return function(text) {
+		return text.split('').reverse().join('');
+	}
+});

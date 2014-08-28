@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title></title>
+		<title>My Angular Notes</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>
@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body ng-app>
+	<body ng-app="myApp">
 		<section class="accordian">
 			<div class="accordian-item">
 				<h1 id="trying-out-expressions" class="accordian-title">Trying out expressions</h1>
@@ -58,6 +58,23 @@
 						<ul>
 							<li ng-repeat="thing in stuff track by $index">{{thing}}</li>
 						</ul>
+					</div>
+				</article>
+			</div>
+			<div class="accordian-item">
+				<h1 id="defining-a-method" class="accordian-title">Defining a Method</h1>
+				<button class="accordian-reveal">+</button>
+				<hr>
+				<article class="accordian-content">
+					<div ng-controller="methodController">
+						<h3>Reversing a String</h3>
+						<input type="text" ng-model="data.reverse"/>
+						{{reversedMessage(data.reverse)}}
+					</div>
+					<div ng-controller="methodController">
+						<h3>Reverse with filter</h3>
+						<input type="text" ng-model="data.filterMessage"/>
+						{{data.filterMessage|reverse}}
 					</div>
 				</article>
 			</div>
